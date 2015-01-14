@@ -17,7 +17,7 @@
     "url": "https://github.com/bebraw/resolve-swagger-refs/issues"
   },
   "main": "./index.js",
-  "keywords": [],
+  "keywords": ["swagger"],
   "licenses": [
     {
       "type": "MIT",
