@@ -31,6 +31,8 @@ function resolveDefinitionRefs(definitions) {
             def = resolveRef(definitions, field);
 
             if(def) {
+                delete field.$ref;
+
                 return extend(def, field);
             }
 
