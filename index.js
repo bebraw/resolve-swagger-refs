@@ -73,7 +73,7 @@ function resolveParameterRefs(definitions, parameters) {
         if(def) {
             meta.schema = def;
         }
-        else {
+        else if(meta.schema) {
             // map through parameters
             meta.schema = fp.map(function(name, item) {
                 var def = resolveArrayRef(definitions, item);
@@ -102,7 +102,7 @@ function resolveResponseRefs(definitions, responses) {
 
         def = resolveArrayRef(definitions, meta.schema);
 
-        if(def) {
+        if(def && meta.schema) {
             meta.schema.items = def;
         }
 
@@ -111,12 +111,20 @@ function resolveResponseRefs(definitions, responses) {
 }
 
 function resolveRef(definitions, field) {
+    if(!field) {
+        return;
+    }
+
     var ref = field.$ref;
 
     return definitions[getRefName(ref)];
 }
 
 function resolveArrayRef(definitions, field) {
+    if(!field) {
+        return;
+    }
+
     var ref = field.items && field.items.$ref;
 
     return definitions[getRefName(ref)];
