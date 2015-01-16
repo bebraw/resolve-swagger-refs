@@ -2,7 +2,7 @@
   "name": "resolve-swagger-refs",
   "description": "Resolves Swagger 2.0 definition references",
   "author": "Juho Vepsalainen <bebraw@gmail.com>",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "dependencies": {
     "annofp": "0.4.1",
     "xtend": "4.0.0"
