@@ -4,7 +4,7 @@
   "author": "Juho Vepsalainen <bebraw@gmail.com>",
   "version": "0.1.4",
   "dependencies": {
-    "annofp": "0.4.0",
+    "annofp": "0.4.1",
     "xtend": "4.0.0"
   },
   "devDependencies": {},
